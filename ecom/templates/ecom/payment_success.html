@@ -1,0 +1,12 @@
+{% extends 'ecom/ecom_base.html' %}
+{%load crispy_forms_tags %}
+{% block title %}
+Payment Successful
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5 pt-4">
+    <h3>ThankYou for choosing us. Your order has been placed successfully. The items will be delivered at your doorstep asap.</h3>
+    <a href="{% url 'ecom:ecom_home' %}" class="btn btn-primary">Go back to home page</a>
+</div>
+{% endblock %}

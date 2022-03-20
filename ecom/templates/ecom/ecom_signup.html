@@ -1,0 +1,22 @@
+{% extends 'ecom/ecom_base.html' %}
+{%load crispy_forms_tags %}
+{% block title %}
+SignUp
+{% endblock %}
+
+{% block content %}
+<div class="container mt-2">
+    <h1>Sign Up</h1>
+    <br>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input class="my-3" type="submit" value="Submit">
+        <br>
+        <div class="checkbox mt-2 row d-flex justify-content-center flex-nowrap">
+            <h6>Already have an account?</h6>
+            <a class="btn btn-sm btn-secondary mx-4" href="{% url 'ecom:ecom_login' %}">Sign In</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

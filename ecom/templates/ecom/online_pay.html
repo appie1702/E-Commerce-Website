@@ -1,0 +1,31 @@
+{% extends 'ecom/ecom_base.html' %}
+
+{% block title %}
+Online Transaction
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4 pt-5">
+    <form action="{% url 'ecom:payment_success' %}" method="POST">
+        {% csrf_token %}
+        <h4><i class="fa-solid fa-wallet"></i>Click on Pay Button to proceed to online transaction</h4>
+            <script
+                    src="https://checkout.razorpay.com/v1/checkout.js"
+                    data-key="rzp_test_OQF0zUX3v90kI6"
+                    data-amount="{{amount}}"
+                    data-currency="INR"
+                    data-order_id="{{payment.id}}"
+                    data-buttontext="PAY NOW"
+                    data-name="Appie Market"
+                    data-description="A Wild Sheep Chase is the third novel by Japanese author Haruki Murakami"
+                    data-image="https://i.pinimg.com/564x/25/7f/39/257f3931ba9a09de975663bceba441ac.jpg"
+                    data-prefill.name="{{request.user.username}}"
+                    data-prefill.email="{{request.user.email}}"
+                    data-theme.color="#7554D7"
+            ></script>
+        <input type="hidden" custom="Hidden Element" name="hidden">
+    </form>
+</div>
+{% endblock %}
+
+

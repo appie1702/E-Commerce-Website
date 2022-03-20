@@ -1,0 +1,30 @@
+{% extends 'ecom/ecom_base.html' %}
+{%load crispy_forms_tags %}
+{% block title %}
+Login
+{% endblock %}
+
+{% block content %}
+{% if next %}
+<div class="alert alert-dark alert-dismissible fade show mt-5 pt-5" role="alert">
+  Please login to start Purchasing!!!
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{% endif %}
+<div class="container mt-2">
+    <h2>Login</h2>
+    <br>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input class="my-3" type="submit" value="Submit">
+        <br>
+        <div class="checkbox mt-2 row d-flex justify-content-center flex-nowrap">
+            <h6>Do not have an account?</h6>
+            <a class="btn btn-sm btn-secondary mx-4" href="{% url 'ecom:ecom_signup' %}">Sign up</a>
+        </div>
+    </form>
+</div>
+{% endblock %}
