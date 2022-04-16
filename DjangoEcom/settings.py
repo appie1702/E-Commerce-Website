@@ -70,8 +70,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'DjangoEcom.wsgi.application'
-LOGIN_REDIRECT_URL = '/ecom'
-LOGOUT_REDIRECT_URL = '/ecom'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases

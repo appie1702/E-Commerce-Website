@@ -1,5 +1,0 @@
-merchant id = J7IcK3YCOkMZXZ
-
-
-key id=rzp_test_OQF0zUX3v90kI6
-key secret = aiXwvXSIkjkHdPKwJoqaVLzX
