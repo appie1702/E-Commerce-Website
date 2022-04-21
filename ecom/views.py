@@ -49,6 +49,11 @@ class HomePageView(ListView):
     template_name = 'ecom/ecom_home.html'
     paginate_by = 10
 
+    def post(self, request, *args, **kwargs):
+        searched = request.POST.get('searched')
+        searched_items = self.get_queryset().filter(title__icontains=searched)
+        return render(request, self.template_name, {'object_list': searched_items})
+
 
 class ItemDetailView(DetailView):
     model = Item

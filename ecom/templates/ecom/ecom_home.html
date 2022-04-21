@@ -33,7 +33,11 @@ Home
         height: 100vh;
       }
     }
-
+    .fabutton {
+        background: none;
+        padding: 0px;
+        border: none;
+    }
 </style>
 
 {% endblock %}
@@ -208,9 +212,10 @@ Home
                 </ul>
                 <!-- Links -->
 
-                <form class="form-inline">
+                <form method="POST" class="form-inline">
+                    {% csrf_token %}
                     <div class="md-form my-0">
-                        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                        <input required class="form-control mr-sm-2" name="searched" type="text" placeholder="Search" aria-label="Search"><button type="submit" class="fabutton"><i style="color: white" class="fa-lg fas fa-search" aria-hidden="true"></i></button>
                     </div>
                 </form>
             </div>
