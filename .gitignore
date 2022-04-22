@@ -2,6 +2,3 @@ merchant.txt
 media_root
 static
 venv
-requirements.txt
-runtime.txt
-Procfile
