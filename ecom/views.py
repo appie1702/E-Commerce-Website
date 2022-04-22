@@ -60,7 +60,7 @@ class ItemDetailView(DetailView):
     template_name = 'ecom/ecom_detail.html'
 
 
-@login_required
+@login_required()
 def add_to_cart(request, slug):
     item = get_object_or_404(Item, slug=slug)
     order_item, created_at = OrderItem.objects.get_or_create(item=item, user=request.user, ordered=False)
