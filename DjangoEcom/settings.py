@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'ecom',
     'crispy_forms',
     'django_countries',
-    'ecom.templatetags.ecom_extras'
+    'ecom.templatetags.ecom_extras',
+    'python-decouple'
 ]
 
 MIDDLEWARE = [
