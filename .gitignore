@@ -3,4 +3,3 @@ media_root
 static
 venv
 .env
-DjangoEcom/settings.py
