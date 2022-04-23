@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = 'django-insecure-1wgpp09l58c^$_az1+6@8s5$thz$j$2-nv328$-fk%wks+#at2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG')
@@ -40,8 +40,7 @@ INSTALLED_APPS = [
     'ecom',
     'crispy_forms',
     'django_countries',
-    'ecom.templatetags.ecom_extras',
-    'python-decouple'
+    'ecom.templatetags.ecom_extras'
 ]
 
 MIDDLEWARE = [
